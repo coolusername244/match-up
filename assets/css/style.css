@@ -1,0 +1,72 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background: #8dd2fc;
+}
+
+.page-head {
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+.page-sub {
+    text-align: center;
+    letter-spacing: 1px;
+}
+.game-info-container {
+    width: 70vw;
+    margin: 0 auto;
+}
+.game-info {
+    text-align: center;
+    font-size: 1.5rem;
+}
+.page-text {
+    text-align: center;
+}
+
+.game-board {
+    height: 75vh;
+    width: 70vw;
+    border: solid 5px black;
+    background-image: linear-gradient(#AADDFD 20%, white);
+    margin: 0 auto;
+}
+
+.game-row {
+    height: 33.333%
+}
+
+.card {
+    position: relative;
+    height: 90%;
+    width: 70%;
+    margin-top: 5%;
+    margin-left: 15%;
+    border: solid 5px #97C4DE
+}
+
+.back-img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+
+
+
+
+.maincontainer{
+  position: absolute;
+  width: 250px;
+  height: 320px;
+  background: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+}
