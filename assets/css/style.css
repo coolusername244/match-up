@@ -47,26 +47,27 @@ body {
     width: 70%;
     margin-top: 5%;
     margin-left: 15%;
-    border: solid 5px #97C4DE
+    border: solid 5px #97C4DE;
+    transform-style: preserve-3d;
+    
 }
 
 .back-img {
     position: absolute;
     height: 100%;
     width: 100%;
+    backface-visibility: hidden;
+
 }
 
+.front-img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+}
 
-
-
-
-.maincontainer{
-  position: absolute;
-  width: 250px;
-  height: 320px;
-  background: none;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
+.card.flipped {
+    transform: rotateY(180deg);
 }
