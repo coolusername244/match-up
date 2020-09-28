@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,300&display=swap');
+
+/*--------------------------------PAGE LAYOUT*/
 * {
     box-sizing: border-box;
 }
@@ -6,6 +9,7 @@ body {
     height: 100vh;
     width: 100vw;
     background: #8dd2fc;
+    font-family: 'Merriweather', serif;
 }
 
 .page-head {
@@ -28,13 +32,15 @@ body {
 .page-text {
     text-align: center;
 }
-
+/*--------------------------------PAGE LAYOUT END*/
+/*--------------------------------BOARD/CARD STYLES*/
 .game-board {
     height: 75vh;
     width: 70vw;
     border: solid 5px black;
     background-image: linear-gradient(#AADDFD 20%, white);
     margin: 0 auto;
+    perspective: 1000px;
 }
 
 .game-row {
@@ -49,7 +55,7 @@ body {
     margin-left: 15%;
     border: solid 5px #97C4DE;
     transform-style: preserve-3d;
-    
+    transition: transform .5s;
 }
 
 .back-img {
@@ -70,4 +76,12 @@ body {
 
 .card.flipped {
     transform: rotateY(180deg);
+}
+/*--------------------------------BOARD/CARD STYLES END*/
+/*--------------------------------BUTTONS*/
+
+.btn-default {
+    background-color: #3CB6FF;
+    border: solid black 1px;
+    padding: .5rem 2rem;
 }
