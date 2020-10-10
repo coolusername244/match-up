@@ -30,6 +30,13 @@ if(document.readyState === 'loading') {
     //
 function ready() {
     let cards = Array.from(document.getElementsByClassName('card'));
+    let overlays = Array.from(document.getElementsByClassName('overlay'));
+
+    overlays.forEach(overlay => {
+        overlay.addEventListener('click', () => {
+            overlay.classList.remove('show-overlay');
+        })
+    })
 
     cards.forEach(card => {
         card.addEventListener('click', () => {
