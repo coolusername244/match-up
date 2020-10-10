@@ -43,6 +43,25 @@ body {
     perspective: 1000px;
 }
 
+.start-screen-overlay {
+    display: none;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+    background: gray;
+    
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0.5;
+}
+
+.show-overlay {
+    display: flex;
+}
+
 .game-row {
     height: 33.333%
 }
