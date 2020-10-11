@@ -1,4 +1,3 @@
-
         //Sounds Class to harbour all sounds used for game
 class Sounds {
     constructor() {
@@ -22,26 +21,59 @@ class Sounds {
     }
 }
 
-if(document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', ready());
-} else {
-    ready();
+class MemoryGame {
+    constructor(time, cards) {
+        this.cardsArray = cards;
+        this.time = time;
+        this.timeRemaining = time;
+        this.clock = document.getElementById('time-remaining');
+        this.totalClicks = document.getElementById('clicks');
+        this.sounds = new Sounds();
+    }
+    startGame() {
+        this.cardToMatch = null;
+        this.clickCounter = 0;
+        this.timeRemaining = this.time;
+        this.matchedCards = [];
+        this.busy = true;
+    }
+
+    flipCard(card) {
+        if (this.canCardBeFlipped(card)) {
+            this.sounds.cardFlip();
+            this.clickCounter++;
+            this.totalClicks.innerHTML = this.clickCounter;
+            card.classList.add('flipped');
+        }
+    }
+
+    canCardBeFlipped(card) {
+        return true;
+    } 
 }
+
     //
 function ready() {
     let cards = Array.from(document.getElementsByClassName('card'));
     let overlays = Array.from(document.getElementsByClassName('overlay'));
+    let game = new MemoryGame(90, cards);
 
     overlays.forEach(overlay => {
         overlay.addEventListener('click', () => {
             overlay.classList.remove('show-overlay');
+            game.startGame();
         })
     })
 
     cards.forEach(card => {
         card.addEventListener('click', () => {
-            card.classList.toggle('flipped');
-            
+            game.flipCard(card);
         });
     });
+}
+
+if(document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', ready());
+} else {
+    ready();
 }
