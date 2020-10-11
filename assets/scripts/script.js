@@ -36,6 +36,7 @@ class MemoryGame {
         this.timeRemaining = this.time;
         this.matchedCards = [];
         this.busy = true;
+        this.shuffleDeck();
     }
 
     flipCard(card) {
@@ -44,6 +45,18 @@ class MemoryGame {
             this.clickCounter++;
             this.totalClicks.innerHTML = this.clickCounter;
             card.classList.add('flipped');
+        }
+    }
+        //reference shuffle function    
+    shuffleDeck() {
+        this.cardsArray.sort((a, b) => 0.5 - Math.random());
+        console.log('i ran');
+
+        for(let i = this.cardsArray.length - 1; i > 0; i--) {
+            let rand = Math.floor(Math.random() * (i + 1));
+            this.cardsArray[rand].style.order = i;
+            this.cardsArray[i].style.order = rand;
+            console.log('i was executed');
         }
     }
 
