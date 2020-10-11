@@ -16,7 +16,7 @@ class Sounds {
     win() {
         this.win.play();
     }
-    gameOver() {
+    gameEnd() {
         this.gameOver.play();
     }
 }
@@ -36,7 +36,20 @@ class MemoryGame {
         this.timeRemaining = this.time;
         this.matchedCards = [];
         this.busy = true;
-        this.shuffleDeck();
+        setTimeout(() => {
+            this.shuffleDeck();
+            this.countdown = this.startTimer();
+            this.busy = false;
+        }, 500);
+        this.resetCards();
+        this.clock.innerHTML = this.time;
+        this.totalClicks.innerHTML = this.clickCounter;
+    }
+
+    resetCards() {
+        this.cardsArray.forEach(card => {
+            card.classList.remove('flipped');
+        });
     }
 
     flipCard(card) {
@@ -47,16 +60,27 @@ class MemoryGame {
             card.classList.add('flipped');
         }
     }
+
+    startTimer() {
+        return setInterval(() => {
+            this.timeRemaining--;
+            this.clock.innerHTML = this.timeRemaining;
+            if(this.timeRemaining === 0) 
+                this.gameOver();
+            }, 1000);
+    }
+
+    gameOver() {
+        clearInterval(this.countdown);
+        this.sounds.gameEnd();
+        document.getElementById('game-over-screen-overlay').classList.add('show-overlay');
+    }
         //reference shuffle function    
     shuffleDeck() {
-        this.cardsArray.sort((a, b) => 0.5 - Math.random());
-        console.log('i ran');
-
         for(let i = this.cardsArray.length - 1; i > 0; i--) {
             let rand = Math.floor(Math.random() * (i + 1));
             this.cardsArray[rand].style.order = i;
             this.cardsArray[i].style.order = rand;
-            console.log('i was executed');
         }
     }
 
@@ -65,11 +89,16 @@ class MemoryGame {
     } 
 }
 
-    //
+if(document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', ready());
+} else {
+    ready();
+}
+
 function ready() {
     let cards = Array.from(document.getElementsByClassName('card'));
     let overlays = Array.from(document.getElementsByClassName('overlay'));
-    let game = new MemoryGame(90, cards);
+    let game = new MemoryGame(3, cards);
 
     overlays.forEach(overlay => {
         overlay.addEventListener('click', () => {
@@ -83,10 +112,4 @@ function ready() {
             game.flipCard(card);
         });
     });
-}
-
-if(document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', ready());
-} else {
-    ready();
 }
