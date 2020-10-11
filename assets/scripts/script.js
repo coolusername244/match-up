@@ -75,6 +75,12 @@ class MemoryGame {
         this.sounds.gameEnd();
         document.getElementById('game-over-screen-overlay').classList.add('show-overlay');
     }
+
+    victory() {
+        clearInterval(this.countdown);
+        this.sounds.win();
+        document.getElementById('win-screen-overlay').classList.add('show-overlay');
+    }
         //reference shuffle function    
     shuffleDeck() {
         for(let i = this.cardsArray.length - 1; i > 0; i--) {
@@ -98,7 +104,7 @@ if(document.readyState === 'loading') {
 function ready() {
     let cards = Array.from(document.getElementsByClassName('card'));
     let overlays = Array.from(document.getElementsByClassName('overlay'));
-    let game = new MemoryGame(3, cards);
+    let game = new MemoryGame(90, cards);
 
     overlays.forEach(overlay => {
         overlay.addEventListener('click', () => {
