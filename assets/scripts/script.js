@@ -3,18 +3,18 @@ class Sounds {
     constructor() {
         this.flip = new Audio('assets/audio/flip.wav');
         this.match = new Audio('assets/audio/match.wav');
-        this.win = new Audio('assets/audio/win.mp3');
+        this.victorySound = new Audio('assets/audio/victory.wav');
         this.gameOver = new Audio('assets/audio/gameover.wav');
     }
         //Functions for sound clips
     cardFlip() {
         this.flip.play();
     }
-    cardMatch() {
+    cardMatchSound() {
         this.match.play();
     }
     win() {
-        this.win.play();
+        this.victorySound.play();
     }
     gameEnd() {
         this.gameOver.play();
@@ -31,7 +31,7 @@ class MemoryGame {
         this.sounds = new Sounds();
     }
     startGame() {
-        this.cardToMatch = null;
+        this.cardToBeChecked = null;
         this.clickCounter = 0;
         this.timeRemaining = this.time;
         this.matchedCards = [];
@@ -58,7 +58,42 @@ class MemoryGame {
             this.clickCounter++;
             this.totalClicks.innerHTML = this.clickCounter;
             card.classList.add('flipped');
+            if(this.cardToBeChecked) {
+                this.checkForMatch(card);
+            } else {
+                this.cardToBeChecked = card;
+            }
         }
+    }
+
+    checkForMatch(card) {
+        if(this.getCardValue(card) === this.getCardValue(this.cardToBeChecked))
+            this.cardMatch(card, this.cardToBeChecked);
+        else
+            this.noMatch(card, this.cardToBeChecked);
+
+        this.cardToBeChecked = null;
+    }
+
+    cardMatch(card1, card2) {
+        this.matchedCards.push(card1);
+        this.matchedCards.push(card2);
+        this.sounds.cardMatchSound();
+        if(this.matchedCards.length === this.cardsArray.length)
+            this.victory();
+    }
+
+    noMatch(card1, card2) {
+        this.busy = true;
+        setTimeout(() => {
+            card1.classList.remove('flipped');
+            card2.classList.remove('flipped');
+            this.busy = false;
+        }, 1000);
+    }
+
+    getCardValue(card) {
+        return card.getElementsByClassName('front-img')[0].src;
     }
 
     startTimer() {
@@ -78,8 +113,10 @@ class MemoryGame {
 
     victory() {
         clearInterval(this.countdown);
-        this.sounds.win();
+        
         document.getElementById('win-screen-overlay').classList.add('show-overlay');
+        console.log('i was ran');
+        this.sounds.win();
     }
         //reference shuffle function    
     shuffleDeck() {
@@ -91,7 +128,7 @@ class MemoryGame {
     }
 
     canCardBeFlipped(card) {
-        return true;
+        return !this.busy && !this.matchedCards.includes(card) && card !== this.cardToBeChecked;
     } 
 }
 
@@ -110,8 +147,8 @@ function ready() {
         overlay.addEventListener('click', () => {
             overlay.classList.remove('show-overlay');
             game.startGame();
-        })
-    })
+        });
+    });
 
     cards.forEach(card => {
         card.addEventListener('click', () => {
