@@ -115,7 +115,6 @@ class MemoryGame {
         clearInterval(this.countdown);
         
         document.getElementById('win-screen-overlay').classList.add('show-overlay');
-        console.log('i was ran');
         this.sounds.win();
     }
         //reference shuffle function    
