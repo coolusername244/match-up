@@ -34,18 +34,7 @@ body {
 }
 /*--------------------------------PAGE LAYOUT END*/
 /*--------------------------------BOARD/CARD STYLES*/
-.game-board {
-    height: 75vh;
-    width: 70vw;
-    border: solid 5px black;
-    background-image: linear-gradient(#AADDFD 20%, white);
-    margin: 0 auto;
-    perspective: 1000px;
-    display: grid;
-    grid-template-columns: repeat(4, 15%);
-    grid-gap: 7%;
-    justify-content: center;
-}
+
 
 .start-screen-overlay {
     display: none;
@@ -112,16 +101,7 @@ body {
     height: 33.333%
 }
 
-.card {
-    position: relative;
-    height: 90%;
-    width: 75%;
-    margin-top: 5%;
-    margin-left: 5%;
-    border: solid 5px #97C4DE;
-    transform-style: preserve-3d;
-    transition: transform .3s;
-}
+
 
 .back-img {
     position: absolute;
@@ -157,15 +137,108 @@ body {
     margin: 0 auto;
     min-width: 70%;
 }
+@media only screen and (max-width: 600px) {
+    .card {
+        position: relative;
+        height: 88%;
+        width: 100%;
+        margin-top: 10%;
+        margin-left: 0%;
+        border: solid 5px #97C4DE;
+        transform-style: preserve-3d;
+        transition: transform .3s;   
+    }
 
-@media screen and (max-width: 767px) and (orientation: landscape) {
-  html {
-    transform: rotate(-90deg);
-    transform-origin: left top;
-    width: 100vh;
-    overflow-x: hidden;
-    position: absolute;
-    top: 100%;
-    left: 0;
-  }
+    .game-board {
+        height: 75vh;
+        width: 70vw;
+        border: solid 5px black;
+        background-image: linear-gradient(#AADDFD 20%, white);
+        margin: 0 auto;
+        perspective: 1000px;
+        display: grid;
+        grid-template-columns: repeat(3, 20%);
+        grid-gap: 6%;
+        justify-content: center;
+        margin-top: 10%;
+    }
+}
+@media only screen and (min-width: 600px) {
+
+    .card {
+        position: relative;
+        height: 88%;
+        width: 100%;
+        margin-top: 5%;
+        margin-left: 3%;
+        border: solid 5px #97C4DE;
+        transform-style: preserve-3d;
+        transition: transform .3s;      
+    }
+
+    .game-board {
+        height: 75vh;
+        width: 70vw;
+        border: solid 5px black;
+        background-image: linear-gradient(#AADDFD 20%, white);
+        margin: 0 auto;
+        perspective: 1000px;
+        display: grid;
+        grid-template-columns: repeat(4, 20%);
+        grid-gap: 5%;
+        justify-content: center;
+    }
+    .card {
+        position: relative;
+        height: 84%;
+        width: 100%;
+        margin-top: 10%;
+        margin-left: 0%;
+        border: solid 5px #97C4DE;
+        transform-style: preserve-3d;
+        transition: transform .3s;
+}
+
+@media only screen and (min-width: 768px) {
+
+    .game-board {
+        height: 75vh;
+        width: 70vw;
+        border: solid 5px black;
+        background-image: linear-gradient(#AADDFD 20%, white);
+        margin: 0 auto;
+        perspective: 1000px;
+        display: grid;
+        grid-template-columns: repeat(4, 20%);
+        grid-gap: 5%;
+        justify-content: center;
+    }
+
+}
+
+@media only screen and (min-width: 1200px) {
+
+    .card {
+        position: relative;
+        height: 90%;
+        width: 75%;
+        margin-top: 5%;
+        margin-left: 5%;
+        border: solid 5px #97C4DE;
+        transform-style: preserve-3d;
+        transition: transform .3s;
+}
+
+    .game-board {
+        height: 75vh;
+        width: 70vw;
+        border: solid 5px black;
+        background-image: linear-gradient(#AADDFD 20%, white);
+        margin: 0 auto;
+        perspective: 1000px;
+        display: grid;
+        grid-template-columns: repeat(4, 15%);
+        grid-gap: 7%;
+        justify-content: center;
+    }
 }
