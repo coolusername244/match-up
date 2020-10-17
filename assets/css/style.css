@@ -42,8 +42,8 @@ body {
     margin: 0 auto;
     perspective: 1000px;
     display: grid;
-    grid-template-columns: repeat(4, auto);
-    grid-gap: 10%;
+    grid-template-columns: repeat(4, 15%);
+    grid-gap: 7%;
     justify-content: center;
 }
 
@@ -114,8 +114,8 @@ body {
 
 .card {
     position: relative;
-    height: 8rem;
-    width: 6rem;
+    height: 90%;
+    width: 75%;
     margin-top: 5%;
     margin-left: 5%;
     border: solid 5px #97C4DE;
@@ -157,3 +157,4 @@ body {
     margin: 0 auto;
     min-width: 70%;
 }
+
