@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/js" href="assets/css/style.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
     <script type="text/javascript">
@@ -15,21 +14,25 @@
     <title>Memory Test! | Feedback</title>
 </head>
 <body>
-<button onclick="location.href='index.html'" class="button return-button">Back to game</button>
-<div class="feedback-container">
-    <div class="feedback-form">
-        <form onsubmit="return sendFeedbackEmail(this);">
-        <h2 class="feedback-heading">Your feedback is greatly appreciated!</h2>
-            <input type="text" class="form-control" id="name" name="name" placeholder="Your name here" required>
-                <br>
-            <input type="email" class="form-control" id="email" name="email" placeholder="Your email here" required>
-                <br>
-            <textarea name="feedback" class="form-control" id="feedback" rows="5" placeholder="Your text here" required></textarea>
-                <br>
-            <button type="submit" class="button">Submit!</button>
-        </form>
+<!--Button to return to game screen-->
+    <button onclick="location.href='index.html'" class="button return-button">Back to game</button>
+<!--Feedback form used with emailJS API - submitting form triggers email to be sent-->
+    <div class="feedback-container">
+        <div class="feedback-form">
+<!--sendFeedbackEmail function defined in 'feedback.js'-->
+            <form onsubmit="return sendFeedbackEmail(this);">
+            <h2 class="feedback-heading">Your feedback is greatly appreciated!</h2>
+<!--All fields are required to ensure forms aren't sent by mistake-->
+                <input type="text" class="form-control" id="name" name="name" placeholder="Your name here" required>
+                    <br>
+                <input type="email" class="form-control" id="email" name="email" placeholder="Your email here" required>
+                    <br>
+                <textarea name="feedback" class="form-control" id="feedback" rows="5" placeholder="Your text here" required></textarea>
+                    <br>
+                <button type="submit" class="button">Submit!</button>
+            </form>
+        </div>
     </div>
-</div>
 <script src="assets/scripts/feedback.js"></script>
 </body>
 </html>
