@@ -1,6 +1,8 @@
+/*--------------------------------SITE FONT*/
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,300&display=swap');
 
 /*--------------------------------PAGE LAYOUT*/
+
 * {
     box-sizing: border-box;
 }
@@ -12,6 +14,10 @@ body {
     font-family: 'Merriweather', serif;
 }
 
+/*--------------------------------PAGE LAYOUT END*/
+
+/*--------------------------------TEXT EDITORS*/
+
 .page-head {
     text-align: center;
     letter-spacing: 2px;
@@ -21,122 +27,19 @@ body {
     text-align: center;
     letter-spacing: 1px;
 }
-.game-info-container {
-    width: 70vw;
-    margin: 0 auto;
+
+.page-text {
+    text-align: center;
 }
+
 .game-info {
     text-align: center;
     font-size: 1.5rem;
 }
-.page-text {
-    text-align: center;
-}
-/*--------------------------------PAGE LAYOUT END*/
-/*--------------------------------BOARD/CARD STYLES*/
+/*--------------------------------TEXT EDITORS END*/
 
+/*--------------------------------GAME AREA STYLES - INCLUDING BREAKPOINTS*/
 
-.start-screen-overlay {
-    display: none;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    position: fixed;
-    background: rgba(0, 0, 0, .8);
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-    color: white;
-    text-align: center;
-}
-
-#game-over-screen-overlay {
-    display: none;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    position: fixed;
-    background: rgba(0, 0, 0, .8);
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-    color: white;
-    text-align: center;
-}
-
-#game-over-screen-overlay.show-overlay {
-    display: flex;
-}
-
-#win-screen-overlay {
-    display: none;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    position: fixed;
-    background: rgba(0, 0, 0, .8);
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-    color: white;
-    text-align: center;
-}
-
-#win-screen-overlay.show-overlay {
-    display: flex;
-}
-
-.overlay {
-    letter-spacing: 2px;
-}
-
-.show-overlay {
-    display: flex;
-}
-
-.game-row {
-    height: 33.333%
-}
-
-
-
-.back-img {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    backface-visibility: hidden;
-
-}
-
-.front-img {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    backface-visibility: hidden;
-    transform: rotateY(180deg);
-}
-
-.card.flipped {
-    transform: rotateY(180deg);
-}
-/*--------------------------------BOARD/CARD STYLES END*/
-/*--------------------------------BUTTONS*/
-
-.btn-default {
-    background-color: #8BC8EC;
-    border: solid black 1px;
-    padding: .5rem 2rem;
-    width: 15%;
-}
-
-#feedback-form {
-    padding-top: 10px;
-    margin: 0 auto;
-    min-width: 70%;
-}
 @media only screen and (max-width: 600px) {
     .card {
         position: relative;
@@ -217,7 +120,7 @@ body {
         border: solid 5px #97C4DE;
         transform-style: preserve-3d;
         transition: transform .3s;
-}
+    }
 }
 
 @media only screen and (min-width: 1200px) {
@@ -247,6 +150,105 @@ body {
         justify-content: center;
     }
 }
+
+.game-info-container {
+    width: 70vw;
+    margin: 0 auto;
+}
+
+.game-row {
+    height: 33.333%
+}
+
+.back-img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    backface-visibility: hidden;
+
+}
+
+.front-img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+}
+
+.card.flipped {
+    transform: rotateY(180deg);
+}
+
+/*--------------------------------GAME AREA STYLES END*/
+
+/*--------------------------------OVERLAYS*/
+
+.start-screen-overlay {
+    display: none;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+    background: rgba(0, 0, 0, .8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    color: white;
+    text-align: center;
+}
+
+#win-screen-overlay {
+    display: none;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+    background: rgba(0, 0, 0, .8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    color: white;
+    text-align: center;
+}
+
+#win-screen-overlay.show-overlay {
+    display: flex;
+}
+
+#game-over-screen-overlay {
+    display: none;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+    background: rgba(0, 0, 0, .8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    color: white;
+    text-align: center;
+}
+
+#game-over-screen-overlay.show-overlay {
+    display: flex;
+}
+
+.overlay {
+    letter-spacing: 2px;
+}
+
+.show-overlay {
+    display: flex;
+}
+
+/*--------------------------------OVERLAYS END*/
+
+/*--------------------------------FEEDBACK PAGE*/
+
 .feedback-container { /*stackoverflow https://stackoverflow.com/questions/31217268/center-div-on-the-middle-of-screen */
     display: flex;
     flex-direction: column;
@@ -255,6 +257,7 @@ body {
     text-align: center;
     min-height: 90vh;
 }
+
 .feedback-form {
     border: solid black 3px;
     border-radius: 1%;
@@ -262,18 +265,17 @@ body {
     background-image: linear-gradient(#AADDFD 20%, white);
 }
 
-.form-control {
-border: black solid 1px;
-}
-
 .feedback-heading {
     margin-bottom: 35px;
 }
 
-.return-button {
-    margin-top: 10px;
-    margin-left: 10px;
+.form-control {
+border: black solid 1px;
 }
+
+/*--------------------------------FEEDBACK PAGE END*/
+
+/*--------------------------------BUTTONS*/
 
 .button {
     background-color: #9BD8FC;
@@ -283,6 +285,13 @@ border: black solid 1px;
     transition: 0.2s
 }
 
+.return-button {
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
 button:hover {
     background-color: #60C0FB;
 }
+
+/*--------------------------------BUTTONS END*/
