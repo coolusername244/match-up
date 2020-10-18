@@ -4,18 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/js" href="assets/css/style.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
     <title>Memory Test!</title>
 </head>
 <body>
+<!--Text removed on smaller screens to improve page usage-->
     <div class="row">
         <div class="col-12 d-none d-md-block">
             <h1 class="page-head">Match the pairs as fast as you can!</h1>
         </div>
     </div>
-    <div class="start-screen-overlay overlay ">
+<!--Overlays to make game run more smoothly - explaining the rules - they are removed when clicked by using JS and the game then begins-->
+    <div class="start-screen-overlay overlay">
         <div>
             <h1>Welcome to the Memory Game!</h1>
             <br>
@@ -23,7 +23,6 @@
             <br>
             <h2>Click to begin!</h2>
         </div>
-        
     </div>
     <div id="game-over-screen-overlay" class="overlay">
         <div>
@@ -34,13 +33,15 @@
             <h2>Click to play again!</h2>
         </div>
     </div>
-    <div id="win-screen-overlay" class="overlay  ">
+    <div id="win-screen-overlay" class="overlay">
         <div>
             <h1>WINNER WINNER, CHICKEN DINNER!</h1>
             <br>
             <h2>Click to play again!</h2>
         </div>
     </div>
+<!--The game board contains all of the cards that will be used to play, total of 12 cards. Cards made up of 3 divs = card container, card front, card back-->
+<!--Image src's are shuffled when the start screen overlay is clicked, to ensure a different order each game-->
     <div class="game-board">
         <div class="card">
             <div class="card-back card-face">
@@ -139,6 +140,7 @@
             </div>
         </div>
     </div>
+<!--Game info contianer - contains click counter and time remaining - once time remaining reaches 0, game overlay will be displayed by using JS-->
     <div class="row game-info-container">
         <div class="col-lg-6 col-sm-12 game-info">
             <p>Moves: <span id="clicks">0</span></p>
@@ -147,12 +149,10 @@
             <p>Time Remaining: <span id="time-remaining">90</span></p>
         </div>
     </div>
-    
-        <div class="d-flex justify-content-center">
-            <p>Feel free to leave us some feedback! <a href="feedback.html">Click here</a></p>
-        </div>
-
-
-    <script src="assets/scripts/script.js"></script>
+<!--link to feedback page-->
+    <div class="d-flex justify-content-center">
+        <p>Feel free to leave us some feedback! <a href="feedback.html">Click here</a></p>
+    </div>
+<script src="assets/scripts/script.js"></script>
 </body>
 </html>
