@@ -229,3 +229,58 @@ All work has been carried out on the master branch.
 The link for the live site: https://coolusername244.github.io/MS2/
 
 ![deployment](assets/readme_docs/deployment.png)
+
+---
+
+# Credits
+
+## Content 
+
+WebDevSimplified and PortEXE helped me troumendously throughout this project, keeping me in line with what best practices, 
+procedures and methodology are for making such a game. Also, FreeCodeCamp helped a lot with their videos too. Their videos can be found here:
+
+[WebDevSimplified](https://www.youtube.com/watch?v=28VfzEiJgy4&t=2084s)
+
+[PortEXE](https://www.youtube.com/watch?v=3uuQ3g92oPQ)
+
+[FreeCodeCamp](https://www.youtube.com/watch?v=ZniVgo8U7ek&t=919s)
+
+
+## Media 
+
+- Sounds 
+    
+    All of the sounds that have been used have been downloaded from freesound.org. Below are a list of
+    the sounds and the links for where to find them:
+
+    - Win Sound: https://freesound.org/people/Tuudurt/sounds/275104/
+
+    - Game Over Sound: https://freesound.org/people/Doctor_Jekyll/sounds/240195/
+
+    - Card Flip Sound: https://freesound.org/people/Breviceps/sounds/448080/
+
+    - Card Match Sound: https://freesound.org/people/JustInvoke/sounds/446111/
+
+- Images (NOTE: I have permission to use all of these images)
+
+    - Card Back: https://www.shutterstock.com/image-vector/seamless-polka-dot-blue-pattern-circles-161223404
+
+    - Card Front: https://www.dreamstime.com/stock-illustration-cartoon-vegetables-fruits-icons-illustration-picture-image63403305
+
+    With regards to the card front image, I used a photo editor to cut each fruit which has been used into individual pictures for the cards.
+
+## Acknowledgements
+
+Code Institute gave me the idea for this game in the MS2 project ideas section. There was me thinking that a card matching game would be
+relatively straight forward, but no!
+
+While doing this project, my knowledge of JavaScript has deepend to what I never thought it could and I realise that the journey ahead will be a long,
+yet very interesting and exciting road.
+
+Shoutout to [Stackoverflow](https://stackoverflow.com/) for centralising a heard of people who have the same problems as me, shepherded by the ones who
+know what they are talking about!
+
+I would like to point out that this site is not to the best of my ability on the style aspect due to work commitments, but thats why I am here, to change what my work 
+commitments are in the long run.
+
+Cheers, hope you enjoy, try and beat my score of 16 :)
