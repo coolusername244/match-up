@@ -6,7 +6,6 @@ To view the live version of the site, please click [here](https://coolusername24
 ---
 ## UX Design
 
----
 
 - As a user, I would like to have a simple theme for such a game to reduce any unwanted distractions and 
 be allowed to focus on the game at hand. 
@@ -55,3 +54,61 @@ any missing infomation being sent.
 Once the submit button has been clicked and the sending of the email is successful, the user will be notified of this in the form 
 of a JavaScript alert box which will pop up and show them the success message, similarly, if there is an error in sending the email,
 they will be notified of this in the same way. 
+
+---
+
+## Features
+
+Feature 1 - Cards 
+
+- You cannot play a card matching game without the cards themselves!
+These cards have been constructed using html and CSS. Each card contains 3 divs in order to work correctly,
+the card container, the front face and the back face. There are 12 cards which are divided into pairs and each 
+pair contain a unique value. In this case, the values are types of fruit. 
+
+Feature 2 - Game Board 
+
+- To give users a better experience, all of the cards are located within a container which seperates it visually 
+from the rest of the page, drawing the focus to the game.
+
+Feature 3 - Overlays
+
+- The purpose of the 3 overlays is to increase the flow of the game. If the game is over, the user is made aware 
+and the game will stop, same for if the user wins. Each of the overlays has an event listener enabling the user to simply
+click to start or restart the game. 
+
+Feature 4 - Time Remaining
+
+- When the user starts a game, the timer will begin to count down from 60, this gives the user a sense of urgency
+and shows that they have x seconds remaining to complete the game. If the game is completed before the timer runs out 
+then the clock will stop ticking. 
+
+Feature 5 - Click Counter
+
+- When playing the game, the main purpose is to complete the game in as few moves as possible, enabling users to compete with 
+friends and see who has the lowest count upon game completion.
+
+Feature 6 - Feedback Form 
+
+- Users are able to report any issues that they encounter by simply clicking on the 'click here' at the bottom
+of the page. This action will redirect the user to the feedback form which they will be promted to fill each box
+and when they are ready to submit, click the submit button. If the email is sent successfuly then they will see an 
+alert box pop up confirming that the email has been sent, likewise, if the email is not sent for whatever reason, they will 
+also be notified.
+
+### Features Left to Impliment
+
+- Difficulty: 
+
+    - I would like to add a difficulty feaature which enables users to choose from easy, medium and hard.
+    The differences would include an increasing amount of cards.
+
+- Feedback Modal:
+
+    - To ensure a smoother user experience, another future implimentation would include a feedback modal
+    so that users would not have to leave the game page.
+
+- Theme Selector:
+    
+    - Instead of having just one theme, which is blue with fruit values, I think it would be good to have a theme
+    selector where people are able to change the color of the backround and instead of fruit, have landmarks/flags etc.
