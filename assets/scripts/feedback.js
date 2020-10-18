@@ -7,9 +7,11 @@ function sendFeedbackEmail(feedbackForm) {
     .then(
         function(response) {
             console.log("Your email was sent!", response);
+            alert("Your feedback was sent! Thank you!");
         },
         function(failed) {
             console.log("Your email was not sent :(", failed);
+            alert("Your email was not sent");
         });
         return false;
 }
