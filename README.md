@@ -161,27 +161,27 @@ Below you will find screenshots from the HTML Validator:
  
 - index.html
 
-![index.html validation](assets/CodeCheck/index_html_valid_check.png)
+![index.html validation](assets/readme_docs/index_html_valid_check.png)
 
 - feedback.html
 
-![feedback.html validation](assets/CodeCheck/feedback_html_valid_check.png)
+![feedback.html validation](assets/readme_docs/feedback_html_valid_check.png)
 
 [CSS Validator](https://jigsaw.w3.org/css-validator/) has been used to check the CSS as shown below:
 
 - style.css
 
-![style.css validation](assets/CodeCheck/style_css_valid_check.png)
+![style.css validation](assets/readme_docs/style_css_valid_check.png)
 
 To test JavaScript validity, i have used [Esprima](https://esprima.org/demo/validate.html). See below for successful tests:
 
 - script.js 
 
-![script.js validation](assets/CodeCheck/script_js_valid_check.png)
+![script.js validation](assets/readme_docs/script_js_valid_check.png)
 
 - feedback.js
 
-![feedback.js validation](assets/CodeCheck/feedback_js_valid_check.png)
+![feedback.js validation](assets/readme_docs/feedback_js_valid_check.png)
 
 
 - Google Chrome Developer Tools
@@ -194,6 +194,24 @@ To test JavaScript validity, i have used [Esprima](https://esprima.org/demo/vali
     - Once i had finished the JavaScript for the game, I tested it out with my personal phone as well, I pushed the repo and used this [link](https://coolusername244.github.io/MS2/) to 
     access. It was only when I used my personal phone that I understood that a 3 column game board was more suitable to mobile devices.
 
-    ![phone screen](assets/CodeCheck/mobile_game_screen.jpeg)
+    ![phone screen](assets/readme_docs/mobile_game_screen.jpeg)
+
+---
+
+## Wireframes 
+
+Please see below the wireframes that I based the design from 
+
+- Desktop Full Screen 
+
+![Desktop full screen](assets/readme_docs/fullscreen_layout.jpeg)
+
+- Mobile Full Screen
+
+![mobile full screen](assets/readme_docs/mobile_layout.jpeg)
+
+- Feedback page
+
+![feedback](assets/readme_docs/feedback_layout.jpeg)
 
 ---
