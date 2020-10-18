@@ -142,7 +142,58 @@ For my milestone 2 project, the technologies I have used include:
     and click counter elements - when on a smaller device, the elements will move on top of each other as apposed to being 
     side-by-side.
 
+- Google Fonts
+
+    - The font that I have used is called Merriweather and can be found [here](https://fonts.google.com/specimen/Merriweather?query=Merriweather)
+
 - EmailJS
 
     - I have also used emailJS (visit their website [here](https://www.emailjs.com/docs/)). This has allowed me to have users
     send me feedback via email from the feedback form located in feedback.html.
+
+---
+
+## Testing
+
+[HTML Validator](https://validator.w3.org/#validate_by_input) has been used to test the HTML pages in this repository.
+    
+Below you will find screenshots from the HTML Validator:
+ 
+- index.html
+
+![index.html validation](assets/CodeCheck/index_html_valid_check.png)
+
+- feedback.html
+
+![feedback.html validation](assets/CodeCheck/feedback_html_valid_check.png)
+
+[CSS Validator](https://jigsaw.w3.org/css-validator/) has been used to check the CSS as shown below:
+
+- style.css
+
+![style.css validation](assets/CodeCheck/style_css_valid_check.png)
+
+To test JavaScript validity, i have used [Esprima](https://esprima.org/demo/validate.html). See below for successful tests:
+
+- script.js 
+
+![script.js validation](assets/CodeCheck/script_js_valid_check.png)
+
+- feedback.js
+
+![feedback.js validation](assets/CodeCheck/feedback_js_valid_check.png)
+
+
+- Google Chrome Developer Tools
+
+    - Google Chrome Developer Tools were used throughout the process as an aid to make sure that all changes that were being implimented, 
+    worked properly. Also to test responsiveness on other device sizes.
+
+- Samsung Galaxy S10
+
+    - Once i had finished the JavaScript for the game, I tested it out with my personal phone as well, I pushed the repo and used this [link](https://coolusername244.github.io/MS2/) to 
+    access. It was only when I used my personal phone that I understood that a 3 column game board was more suitable to mobile devices.
+
+    ![phone screen](assets/CodeCheck/mobile_game_screen.jpeg)
+
+---
