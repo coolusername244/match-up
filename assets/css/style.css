@@ -167,14 +167,31 @@ body {
 
     .card {
         position: relative;
-        height: 88%;
+        height: 84%;
         width: 100%;
-        margin-top: 5%;
-        margin-left: 3%;
+        margin-top: 10%;
+        margin-left: 0%;
         border: solid 5px #97C4DE;
         transform-style: preserve-3d;
-        transition: transform .3s;      
+        transition: transform .3s;
     }
+
+    .game-board {
+        height: 75vh;
+        width: 70vw;
+        border: solid 5px black;
+        background-image: linear-gradient(#AADDFD 20%, white);
+        margin: 0 auto;
+        margin-top: 10%;
+        perspective: 1000px;
+        display: grid;
+        grid-template-columns: repeat(4, 20%);
+        grid-gap: 5%;
+        justify-content: center;
+    }
+}
+
+@media only screen and (min-width: 768px) {
 
     .game-board {
         height: 75vh;
@@ -198,22 +215,6 @@ body {
         transform-style: preserve-3d;
         transition: transform .3s;
 }
-
-@media only screen and (min-width: 768px) {
-
-    .game-board {
-        height: 75vh;
-        width: 70vw;
-        border: solid 5px black;
-        background-image: linear-gradient(#AADDFD 20%, white);
-        margin: 0 auto;
-        perspective: 1000px;
-        display: grid;
-        grid-template-columns: repeat(4, 20%);
-        grid-gap: 5%;
-        justify-content: center;
-    }
-
 }
 
 @media only screen and (min-width: 1200px) {
@@ -227,7 +228,7 @@ body {
         border: solid 5px #97C4DE;
         transform-style: preserve-3d;
         transition: transform .3s;
-}
+    }
 
     .game-board {
         height: 75vh;
@@ -241,4 +242,9 @@ body {
         grid-gap: 7%;
         justify-content: center;
     }
+}
+
+.feedback-form {
+    max-width: 70%;
+    margin: 15%;    
 }
