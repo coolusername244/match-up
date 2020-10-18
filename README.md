@@ -112,3 +112,37 @@ also be notified.
     
     - Instead of having just one theme, which is blue with fruit values, I think it would be good to have a theme
     selector where people are able to change the color of the backround and instead of fruit, have landmarks/flags etc.
+
+---
+
+## Technology Used 
+
+For my milestone 2 project, the technologies I have used include:
+
+- HTML5 
+
+    - To give the page its content - index.html & feedback.html
+
+- CSS
+
+    - All styling has been done through CSS - located in 'assets/css/style.css'
+
+- CSS Grid
+
+    - I have used CSS Grid to help layout the cards in a 4 column grid on devices larger than 600px wide, 
+    and a 3 column grid on devices smaller than 600px.
+
+- JavaScript
+
+    - To give the game the logic that is required, i have used JavaScript - located in 'assets/scripts/...'
+
+- Bootstrap
+
+    - Bootstrap has been used to make some elements responsive to different screen sizes such as the time remaining 
+    and click counter elements - when on a smaller device, the elements will move on top of each other as apposed to being 
+    side-by-side.
+
+- EmailJS
+
+    - I have also used emailJS (visit their website [here](https://www.emailjs.com/docs/)). This has allowed me to have users
+    send me feedback via email from the feedback form located in feedback.html.
