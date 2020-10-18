@@ -1,39 +1,57 @@
-<img src="https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png" style="margin: 0;">
+# Memory Game! - Milestone 2 Project
+A simple card mathing game where the objective is to match all of the pairs before the time runs out, with the lowest amount of clicks!
 
-Welcome coolusername244,
+To view the live version of the site, please click [here](https://coolusername244.github.io/MS2/)!
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project.
+---
+## UX Design
 
-## Gitpod Reminders
+---
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+- As a user, I would like to have a simple theme for such a game to reduce any unwanted distractions and 
+be allowed to focus on the game at hand. 
 
-`python3 -m http.server`
+This has been achieved by using a minimal design and light colors as to not be too 
+distracting or invasive. 
 
-A blue button should appear to click: *Make Public*,
+- As a user of this game, i would like there to be a contrast between the cards and the background.
 
-Another blue button should appear to click: *Open Browser*.
+To enable a more enjoyable experience, i have added a gradual graient inside of the game board horizontally,
+going from light blue to white.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+- As a user, I would like there to be some kind of seperate system for before the game begins and after
+ it has ended.
 
-A blue button should appear to click: *Make Public*,
+When the site is initially loaded, the user will be greeted with the start screen which is a a lot darker than
+the rest of the page, this is to now draw the users attention away from the game and now towards the rules of the 
+start screen.
 
-Another blue button should appear to click: *Open Browser*.
+- As a user, if I have won or lost the game, I would like there to be some kind of change which notifies me of
+ what is happening.
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the backend lessons.
+ If the 'Time Remaining' reaches 0, the user will no longer be able to continue as there will be another 
+ dark overlay which covers the screen explaining that they have lost the game, a game-over sound will be played
+ users are welcome to try again by simply clicking on the screen and the whole page will be refreshed, good as new.
+ 
+ Similarly, if the user wins the game, a victory sound will be played as well as the dark overlay appearing, congratulating
+ the user on winning the game, as well as inviting them to play again simply by clicking on the screen.
 
-## Updates Since The Instructional Video
+- As a user, I would like there to be sounds which keep me engaged and that celebrate my victory
+   of matching two cards.
 
-We continually tweak and adjust this template to help give you the best experience. Here are the updates since the original video was made:
+When a user clicks on any card, there will be a litle flip sound played. If the user then proceeds to flip another
+card and is lucky enough to make a match, there will be a little chime played to let the user know that they have
+been successful in making a match. 
+ 
+- As a user, I would like to be able to report any problems which I may find during my experience while playing the 
+game.
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+To enable users to do this, I have added in a feedback form which is locted on a different page. Users can easily gain 
+access to this by clicking on the link at the bottom of the page which is clearly directing them to an area to leave feedback.
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+All sections of the feedback form will have to be filled out in order for the user to send the feedback to me, this prevents
+any missing infomation being sent. 
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
---------
-
-Happy coding!
+Once the submit button has been clicked and the sending of the email is successful, the user will be notified of this in the form 
+of a JavaScript alert box which will pop up and show them the success message, similarly, if there is an error in sending the email,
+they will be notified of this in the same way. 
