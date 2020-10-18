@@ -15,18 +15,18 @@
     <title>Memory Test! | Feedback</title>
 </head>
 <body>
-<div>
-    
+<button onclick="location.href='index.html'" class="button return-button">Back to game</button>
+<div class="feedback-container">
     <div class="feedback-form">
-    <h2>Your feedback is greatly appreciated!</h2>
         <form onsubmit="return sendFeedbackEmail(this);">
+        <h2 class="feedback-heading">Your feedback is greatly appreciated!</h2>
             <input type="text" class="form-control" id="name" name="name" placeholder="Your name here" required>
                 <br>
             <input type="email" class="form-control" id="email" name="email" placeholder="Your email here" required>
                 <br>
             <textarea name="feedback" class="form-control" id="feedback" rows="5" placeholder="Your text here" required></textarea>
                 <br>
-            <input type="submit" value="Submit!">
+            <button type="submit" class="button">Submit!</button>
         </form>
     </div>
 </div>

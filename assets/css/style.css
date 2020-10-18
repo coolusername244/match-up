@@ -153,6 +153,7 @@ body {
         height: 75vh;
         width: 70vw;
         border: solid 5px black;
+        border-radius: 1%;
         background-image: linear-gradient(#AADDFD 20%, white);
         margin: 0 auto;
         perspective: 1000px;
@@ -180,6 +181,7 @@ body {
         height: 75vh;
         width: 70vw;
         border: solid 5px black;
+        border-radius: 1%;
         background-image: linear-gradient(#AADDFD 20%, white);
         margin: 0 auto;
         margin-top: 10%;
@@ -197,6 +199,7 @@ body {
         height: 75vh;
         width: 70vw;
         border: solid 5px black;
+        border-radius: 1%;
         background-image: linear-gradient(#AADDFD 20%, white);
         margin: 0 auto;
         perspective: 1000px;
@@ -234,6 +237,7 @@ body {
         height: 75vh;
         width: 70vw;
         border: solid 5px black;
+        border-radius: 1%;
         background-image: linear-gradient(#AADDFD 20%, white);
         margin: 0 auto;
         perspective: 1000px;
@@ -243,8 +247,42 @@ body {
         justify-content: center;
     }
 }
-
+.feedback-container { /*stackoverflow https://stackoverflow.com/questions/31217268/center-div-on-the-middle-of-screen */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 90vh;
+}
 .feedback-form {
-    max-width: 70%;
-    margin: 15%;    
+    border: solid black 3px;
+    border-radius: 1%;
+    padding: 7%;
+    background-image: linear-gradient(#AADDFD 20%, white);
+}
+
+.form-control {
+border: black solid 1px;
+}
+
+.feedback-heading {
+    margin-bottom: 35px;
+}
+
+.return-button {
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.button {
+    background-color: #9BD8FC;
+    border: black solid 2px;
+    border-radius: 5%;
+    padding: .5rem;
+    transition: 0.2s
+}
+
+button:hover {
+    background-color: #60C0FB;
 }
