@@ -215,3 +215,17 @@ Please see below the wireframes that I based the design from
 ![feedback](assets/readme_docs/feedback_layout.jpeg)
 
 ---
+
+## Deployment
+
+To deploy this site, I used GitHub pages.
+
+With my documents stored in a repository in GitHub, went into the settings by clicking 
+the settings icon in the top right of the screen. Towards the bottom of the page, under 
+'GitHub Pages'.
+
+All work has been carried out on the master branch.
+
+The link for the live site: https://coolusername244.github.io/MS2/
+
+![deployment](assets/readme_docs/deployment.png)
