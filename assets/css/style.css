@@ -41,15 +41,14 @@ body {
 /*--------------------------------GAME AREA STYLES - INCLUDING BREAKPOINTS*/
 
 .game-board {
-  height: 90vh;
-  width: 70vw;
-  border: solid 5px black;
+  height: 80vh;
+  border: solid 2px black;
   border-radius: 1%;
   background-image: linear-gradient(#aaddfd 20%, white);
-  margin: 1.5em auto 1em;
+  margin: 0.5em 0.5em 1em 0.5em;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  padding: 1em;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 0.5em;
   justify-content: center;
 }
 
@@ -67,8 +66,8 @@ body {
   align-items: center;
   justify-self: center;
   perspective: 1000px;
-  width: 60%;
-  margin: 1em;
+  width: 80%;
+  margin: 0.5em;
   background: transparent;
   position: relative;
 }
@@ -92,7 +91,7 @@ body {
 }
 
 .card-front img {
-  padding: 1em;
+  padding: 0.25em;
 }
 
 .card-front,
@@ -227,3 +226,28 @@ button:hover {
 }
 
 /*--------------------------------BUTTONS END*/
+
+@media (min-width: 768px) {
+  .game-board {
+    margin: 2em 2em 1em 2em;
+    border-width: 4px;
+  }
+  .card-front img {
+    padding: 0.5em;
+  }
+}
+
+@media (min-width: 992px) {
+  .game-board {
+    border-width: 4px;
+    margin: 2em 10em;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .card {
+    width: 60%;
+  }
+  .card-front img {
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+}
