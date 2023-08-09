@@ -1,158 +1,216 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
     <title>Memory Test!</title>
-</head>
-<body>
-<!--Text removed on smaller screens to improve page usage-->
-    <div class="row">
-        <div class="col-12 d-none d-md-block">
-            <h1 class="page-head">Match the pairs as fast as you can!</h1>
-        </div>
-    </div>
-<!--Overlays to make game run more smoothly - explaining the rules - they are removed when clicked by using JS and the game then begins-->
+  </head>
+  <body>
+    <!--Overlays to make game run more smoothly - explaining the rules - they are removed when clicked by using JS and the game then begins-->
     <div class="start-screen-overlay overlay show-overlay">
-        <div>
-            <h1>Welcome to the Memory Game!</h1>
-            <br>
-            <h3>Your mission is to match all of the cards as fast as you can!</h3>
-            <br>
-            <h2>Click to begin!</h2>
-        </div>
+      <div>
+        <h1>Welcome to the Memory Game!</h1>
+        <br />
+        <h3>Your mission is to match all of the cards as fast as you can!</h3>
+        <br />
+        <h2>Click to begin!</h2>
+      </div>
     </div>
-    <div id="game-over-screen-overlay" class="overlay">
-        <div>
-            <h1>GAME OVER!</h1>
-            <br>
-            <h2>Better luck next time!</h2>
-            <br>
-            <h2>Click to play again!</h2>
-        </div>
-    </div>
+    <!-- <div id="game-over-screen-overlay" class="overlay">
+      <div>
+        <h1>GAME OVER!</h1>
+        <br />
+        <h2>Better luck next time!</h2>
+        <br />
+        <h2>Click to play again!</h2>
+      </div>
+    </div> -->
     <div id="win-screen-overlay" class="overlay">
-        <div>
-            <h1>WINNER WINNER, CHICKEN DINNER!</h1>
-            <br>
-            <h2>Click to play again!</h2>
-        </div>
+      <div>
+        <h1>WINNER WINNER, CHICKEN DINNER!</h1>
+        <br />
+        <h2>Click to play again!</h2>
+      </div>
     </div>
-<!--The game board contains all of the cards that will be used to play, total of 12 cards. Cards made up of 3 divs = card container, card front, card back-->
-<!--Image src's are shuffled when the start screen overlay is clicked, to ensure a different order each game-->
+    <!--The game board contains all of the cards that will be used to play, total of 12 cards. Cards made up of 3 divs = card container, card front, card back-->
+    <!--Image src's are shuffled when the start screen overlay is clicked, to ensure a different order each game-->
     <div class="game-board">
-        <div class="card">
-            <div class="card-back card-face">
-                <img class="back-img" src="assets/images/card-back.png" alt="card-back">
-            </div>
-            <div class="card-front card-face">
-                <img class="front-img" src="assets/images/apple.png" alt="apple">
-            </div>
+      <div class="card">
+        <div class="card-inner">
+          <div class="card-face card-back">
+            <img src="assets/images/card-back.png" alt="card-back" />
+          </div>
+          <div class="card-face card-front">
+            <img class="front-img" src="assets/images/apple.png" alt="apple" />
+          </div>
         </div>
-        <div class="card">
-            <div class="card-back card-face">
-                <img class="back-img" src="assets/images/card-back.png" alt="card-back">
-            </div>
-            <div class="card-front card-face">
-                <img class="front-img" src="assets/images/apple.png" alt="apple">
-            </div>
+      </div>
+      <div class="card">
+        <div class="card-inner">
+          <div class="card-face card-back">
+            <img src="assets/images/card-back.png" alt="card-back" />
+          </div>
+          <div class="card-face card-front">
+            <img class="front-img" src="assets/images/apple.png" alt="apple" />
+          </div>
         </div>
-        <div class="card ">
-            <div class="card-back card-face">
-                <img class="back-img" src="assets/images/card-back.png" alt="card-back">
-            </div>
-            <div class="card-front card-face">
-                <img class="front-img" src="assets/images/banana.png" alt="banana">
-            </div>
-        </div>       
-        <div class="card ">
-            <div class="card-back card-face">
-                <img class="back-img" src="assets/images/card-back.png" alt="card-back">
-            </div>
-            <div class="card-front card-face">
-                <img class="front-img" src="assets/images/banana.png" alt="banana">
-            </div>
+      </div>
+      <div class="card">
+        <div class="card-inner">
+          <div class="card-face card-back">
+            <img src="assets/images/card-back.png" alt="card-back" />
+          </div>
+          <div class="card-face card-front">
+            <img
+              class="front-img"
+              src="assets/images/banana.png"
+              alt="banana"
+            />
+          </div>
         </div>
-        <div class="card ">
-            <div class="card-back card-face">
-                <img class="back-img" src="assets/images/card-back.png" alt="card-back">
-            </div>
-            <div class="card-front card-face">
-                <img class="front-img" src="assets/images/grapes.png" alt="grapes">
-            </div>
+      </div>
+      <div class="card">
+        <div class="card-inner">
+          <div class="card-face card-back">
+            <img src="assets/images/card-back.png" alt="card-back" />
+          </div>
+          <div class="card-face card-front">
+            <img
+              class="front-img"
+              src="assets/images/banana.png"
+              alt="banana"
+            />
+          </div>
         </div>
-        <div class="card ">
-            <div class="card-back card-face">
-                <img class="back-img" src="assets/images/card-back.png" alt="card-back">
-            </div>
-            <div class="card-front card-face">
-                <img class="front-img" src="assets/images/grapes.png" alt="grapes">
-            </div>
+      </div>
+      <div class="card">
+        <div class="card-inner">
+          <div class="card-face card-back">
+            <img src="assets/images/card-back.png" alt="card-back" />
+          </div>
+          <div class="card-face card-front">
+            <img
+              class="front-img"
+              src="assets/images/grapes.png"
+              alt="grapes"
+            />
+          </div>
         </div>
-        <div class="card ">
-            <div class="card-back card-face">
-                <img class="back-img" src="assets/images/card-back.png" alt="card-back">
-            </div>
-            <div class="card-front card-face">
-                <img class="front-img" src="assets/images/pineapple.png" alt="pineapple">
-            </div>
+      </div>
+      <div class="card">
+        <div class="card-inner">
+          <div class="card-face card-back">
+            <img src="assets/images/card-back.png" alt="card-back" />
+          </div>
+          <div class="card-face card-front">
+            <img
+              class="front-img"
+              src="assets/images/grapes.png"
+              alt="grapes"
+            />
+          </div>
         </div>
-        <div class="card ">
-            <div class="card-back card-face">
-                <img class="back-img" src="assets/images/card-back.png" alt="card-back">
-            </div>
-            <div class="card-front card-face">
-                <img class="front-img" src="assets/images/pineapple.png" alt="pineapple">
-            </div>
+      </div>
+      <div class="card">
+        <div class="card-inner">
+          <div class="card-face card-back">
+            <img src="assets/images/card-back.png" alt="card-back" />
+          </div>
+          <div class="card-face card-front">
+            <img
+              class="front-img"
+              src="assets/images/pineapple.png"
+              alt="pineapple"
+            />
+          </div>
         </div>
-        <div class="card ">
-            <div class="card-back card-face">
-                <img class="back-img" src="assets/images/card-back.png" alt="card-back">
-            </div>
-            <div class="card-front card-face">
-                <img class="front-img" src="assets/images/orange.png" alt="orange">
-            </div>
+      </div>
+      <div class="card">
+        <div class="card-inner">
+          <div class="card-face card-back">
+            <img src="assets/images/card-back.png" alt="card-back" />
+          </div>
+          <div class="card-face card-front">
+            <img
+              class="front-img"
+              src="assets/images/pineapple.png"
+              alt="pineapple"
+            />
+          </div>
         </div>
-        <div class="card ">
-            <div class="card-back card-face">
-                <img class="back-img" src="assets/images/card-back.png" alt="card-back">
-            </div>
-            <div class="card-front card-face">
-                <img class="front-img" src="assets/images/orange.png" alt="orange">
-            </div>
+      </div>
+      <div class="card">
+        <div class="card-inner">
+          <div class="card-face card-back">
+            <img src="assets/images/card-back.png" alt="card-back" />
+          </div>
+          <div class="card-face card-front">
+            <img
+              class="front-img"
+              src="assets/images/orange.png"
+              alt="orange"
+            />
+          </div>
         </div>
-        <div class="card ">
-            <div class="card-back card-face">
-                <img class="back-img" src="assets/images/card-back.png" alt="card-back">
-            </div>
-            <div class="card-front card-face">
-                <img class="front-img" src="assets/images/pear.png" alt="pear">
-            </div>
+      </div>
+      <div class="card">
+        <div class="card-inner">
+          <div class="card-face card-back">
+            <img src="assets/images/card-back.png" alt="card-back" />
+          </div>
+          <div class="card-face card-front">
+            <img
+              class="front-img"
+              src="assets/images/orange.png"
+              alt="orange"
+            />
+          </div>
         </div>
-        <div class="card ">
-            <div class="card-back card-face">
-                <img class="back-img" src="assets/images/card-back.png" alt="card-back">
-            </div>
-            <div class="card-front card-face">
-                <img class="front-img" src="assets/images/pear.png" alt="pear">
-            </div>
+      </div>
+      <div class="card">
+        <div class="card-inner">
+          <div class="card-face card-back">
+            <img src="assets/images/card-back.png" alt="card-back" />
+          </div>
+          <div class="card-face card-front">
+            <img class="front-img" src="assets/images/pear.png" alt="pear" />
+          </div>
         </div>
+      </div>
+      <div class="card">
+        <div class="card-inner">
+          <div class="card-face card-back">
+            <img src="assets/images/card-back.png" alt="card-back" />
+          </div>
+          <div class="card-face card-front">
+            <img class="front-img" src="assets/images/pear.png" alt="pear" />
+          </div>
+        </div>
+      </div>
     </div>
-<!--Game info contianer - contains click counter and time remaining - once time remaining reaches 0, game overlay will be displayed by using JS-->
+    <!--Game info contianer - contains click counter and time remaining - once time remaining reaches 0, game overlay will be displayed by using JS-->
     <div class="row game-info-container">
-        <div class="col-lg-6 col-sm-12 game-info">
-            <p>Moves: <span id="clicks">0</span></p>
-        </div>
-        <div class="col-lg-6 col-sm-12 game-info">
-            <p>Time Remaining: <span id="time-remaining">60</span></p>
-        </div>
+      <div class="col-lg-6 col-sm-12 game-info">
+        <p>Moves: <span id="clicks">0</span></p>
+      </div>
+      <div class="col-lg-6 col-sm-12 game-info">
+        <p>Time Remaining: <span id="time-remaining">60</span></p>
+      </div>
     </div>
-<!--link to feedback page-->
+    <!--link to feedback page-->
     <div class="d-flex justify-content-center">
-        <p>Feel free to leave us some feedback! <a href="feedback.html">Click here</a></p>
+      <p>
+        Feel free to leave us some feedback!
+        <a href="feedback.html">Click here</a>
+      </p>
     </div>
-<script src="assets/scripts/script.js"></script>
-</body>
+    <script src="assets/scripts/script.js"></script>
+  </body>
 </html>
